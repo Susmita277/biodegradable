@@ -1,0 +1,41 @@
+@props(['block'])
+
+@php
+    $data = data_get($block, 'data');
+    $heading = data_get($data, 'heading');
+    $description = data_get($data, 'description');
+    $testimonials = data_get($data, 'testimonials');
+@endphp
+{{-- testimonials --}}
+<div class="lg:p-12 p-5">
+    <div class=" text-center">
+        <h2 class="font-poppins leading-relaxed">{{ $heading }}</h2>
+        <p class="lg:!text-sm/8 text-sm/4 tracking-wide leading-relaxed lg:px-[25%] py-2 2xl:!text-xl/8">
+            {{ $description }}
+        </p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8 grid-template-rows:masonry]">
+
+        @foreach ($testimonials as $testi)
+            <div
+                class=" mb-4 
+                    border border-gray-200 rounded-xl p-5 hover:shadow-md !h-contain transition">
+
+                <div class="mb-4 flex gap-2">
+                    <div class="bg-gray-200 rounded-full lg:w-14 lg:h-14 w-10 h-10 overflow-hidden">
+                        <img src="{{ broccoli_asset($testi['author_image']) }}" class="h-full w-full object-cover">
+                    </div>
+                    <div>
+                        <h4>{{ $testi['author'] }}</h4>
+                        <span class="text-gray-500">{{ $testi['position'] }}</span>
+                    </div>
+                </div>
+                <p class="lg:!text-sm/8 text-sm/4 tracking-wide leading-relaxed  py-2 2xl:!text-xl/8 text-gray-500">
+                    {{ $testi['quote'] }}
+                </p>
+
+            </div>
+        @endforeach
+    </div>
+
+</div>
