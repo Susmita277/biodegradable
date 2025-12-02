@@ -6,4 +6,7 @@
  */
 use Illuminate\Support\Facades\Route;
 
-Route::get('/home', \App\Livewire\Home::class);
+Route::get('/', \App\Livewire\Home::class)->name('home');
+Route::get('/contact', \App\Livewire\Contact::class)->name('contact');
+Route::get('/about', \App\Livewire\About::class)->name('about');
+Route::get('/why-us', \App\Livewire\WhyUs::class)->name('why-us');

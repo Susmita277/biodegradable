@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Abibiodegredeable</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script type="module" src="http://127.0.0.1:5173/@vite/client" data-navigate-track="reload"></script><link rel="stylesheet" href="http://127.0.0.1:5173/resources/css/app.css" data-navigate-track="reload" /><!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+</head>
+
+<body class="bg-[#fbf8ef] font-inter">
+    <div class="px-12 sticky top-0 bg-[#fbf8ef] z-60 hidden lg:block">
+    <ul class="flex justify-between items-center py-2 ">
+        <li>
+            <a href="http://127.0.0.1:8000">
+                <div class="w-18 h-12 overflow-hidden">
+                    <img src="http://127.0.0.1:8000/abi.png" class="w-full h-full object- contain object-center">
+                </div>
+            </a>
+        </li>
+        <li class="flex items-center font-inter text-xs gap-8  justify-center ml-20">
+            <a href="http://127.0.0.1:8000">
+                <p>Home</p>
+            </a>
+            <a href="http://127.0.0.1:8000/about">
+                <p>About Us</p>
+            </a>
+            <a href="http://127.0.0.1:8000/mission">
+                <p>Why Us</p>
+            </a>
+            <a href="http://127.0.0.1:8000/contact">
+                <p>Contact</p>
+            </a>
+        </li>
+        <li class="flex gap-2  justify-center">
+            <button class="btn secondary">Explore</button>
+            <button class="btn highlight">Get a Quote</button>
+        </li>
+    </ul>
+</div>
+
+<!-- Small Screen Header -->
+<div class="lg:hidden  px-5 py-2 sticky top-0 bg-[#fbf8ef] z-60" x-data="{ open: false }">
+    <div class="flex items-center justify-between w-full">
+        <!-- Logo -->
+        <a href="http://127.0.0.1:8000" class="transform -translate-x-10">
+            <div class="w-24 h-12  overflow-hidden">
+                <img src="http://127.0.0.1:8000/abi.png" class="w-full h-full object-contain ">
+            </div>
+        </a>
+        <!-- Menu Icon -->
+        <button @click="open = !open" class="text-gray-800 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <path x-show="open" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div x-show="open" x-transition
+        class="absolute top-full left-0 w-full bg-white  mt-2 rounded-b-lg bottom-0 h-screen">
+        <ul class="flex flex-col gap-4 p-4 font-inter text-sm">
+            <li><a href="http://127.0.0.1:8000" class="block hover:text-[#389537]">Home</a></li>
+            <li><a href="http://127.0.0.1:8000/about" class="block hover:text-[#389537]">About Us</a></li>
+            <li><a href="http://127.0.0.1:8000/mission" class="block hover:text-[#389537]">Why Us</a></li>
+            <li><a href="http://127.0.0.1:8000/contact" class="block hover:text-[#389537]">Contact</a></li>
+        </ul>
+    </div>
+</div>
+    <div wire:snapshot="{&quot;data&quot;:[],&quot;memo&quot;:{&quot;id&quot;:&quot;6Cp5bHs7MxDc4uO21CEZ&quot;,&quot;name&quot;:&quot;home&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;26a350d405c8c63d4bc855d908cbe3e5d134563ed8aaa939e369d9fd82bac707&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="6Cp5bHs7MxDc4uO21CEZ">
+    
+    <div >
+    <div class=" flex justify-center relative ">
+        <div class="lg:w-[60%] md:[50%] w-full p-5 lg:px-12 lg:pt-12 ">
+            <div class="grid place-items-center ">
+                <div class="p-1 rounded-full  border border-gray-200 flex gap-1 justify-center w-fit">
+                    <div class="w-5 h-5 ">
+                        <img src="smiling-face.png" class="w-full h-full object-cover" />
+                    </div>
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+</svg>                    <div class="w-5 h-5 overflow-hidden rounded-full">
+                        <img src="data:image/jpeg;base64,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"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <p>Clean environments</p>
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+</svg>                    <div class="w-5 h-5 ">
+                        <img src="nature.png" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <h1 class="text-center py-2 font-poppins">Nature-Inspired Products Designed for a Better Planet</h1>
+                <p
+                    class="text-gray-500 text-center lg:!text-sm/8 text-sm/4 tracking-wide leading-relaxed lg:px-[20%] md:px-[15%] px-[5%]">
+                    We design
+                    biodegradable
+                    products that make life easier while keeping our planet cleaner.</p>
+                <div class="flex gap-2 items-center justify-center mt-4">
+                    <div class="flex gap-2 btn main !h-8">
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M15.22 6.268a.75.75 0 0 1 .968-.431l5.942 2.28a.75.75 0 0 1 .431.97l-2.28 5.94a.75.75 0 1 1-1.4-.537l1.63-4.251-1.086.484a11.2 11.2 0 0 0-5.45 5.173.75.75 0 0 1-1.199.19L9 12.312l-6.22 6.22a.75.75 0 0 1-1.06-1.061l6.75-6.75a.75.75 0 0 1 1.06 0l3.606 3.606a12.695 12.695 0 0 1 5.68-4.974l1.086-.483-4.251-1.632a.75.75 0 0 1-.432-.97Z" clip-rule="evenodd"/>
+</svg>                        <p>Green Solutions</p>
+                    </div>
+                    <div class="flex gap-2 btn secondary !h-8">
+                        <p>Let's Connect</p>
+                        <div class="w-6 h-6 flex justify-center items-center rounded-full bg-black/15">
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+</svg>                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div>
+                    <img src="https://static.vecteezy.com/system/resources/previews/068/872/072/non_2x/barren-tree-on-one-side-and-lush-green-tree-on-other-side-symbolize-contrast-between-life-and-death-showcasing-nature-resilience-and-beauty-png.png"
+                        class="w-full lg:h-[420px] md:h-[350px] h-[250px] object-cover " />
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="flex flex-col  justify-center text-center items-start lg:text-left absolute lg:left-0 -left-5  opacity-75 lg:top-[45%] top-[55%]">
+            <div
+                class="flex  lg:justify-center lg:w-44 lg:h-44 h-28 w-28 rounded-full bg-transparent transform lg:-rotate-12 border-gray-200 border overflow-hidden">
+                <img src="rawmaterial.png" data-alt="Abstract representation of plant fibers and raw natural materials"
+                    class="w-full h-full object-contain" />
+            </div>
+            <div
+                class="flex  lg:justify-center lg:w-28 lg:h-28 h-16 w-16  transform rounded-full bg-transparent transform rotate-6 border-gray-200 border overflow-hidden  lg:ml-32 ml-10 lg:-mt-[3rem] -mt-[2rem]">
+                <img src="rawmaterial2.png" data-alt="Abstract representation of plant fibers and raw natural materials"
+                    class="w-full h-full object-contain" />
+            </div>
+            <div
+                class="flex  lg:justify-center w-22 h-22 lg:w-36 lg:h-36 transform rounded-full bg-transparent transform rotate-6 border-gray-200 border overflow-hidden  lg:ml-8 lg:-mt-[3rem] -mt-[2rem]">
+                <img src="rawmaterial3.png" data-alt="Abstract representation of plant fibers and raw natural materials"
+                    class="w-full h-full object-contain" />
+            </div>
+        </div>
+
+
+        <div
+            class="flex flex-col  justify-center text-center items-end lg:text-right lg:right-0 -right-5 absolute opacity-75 lg:top-[45%] top-[55%]">
+            <div
+                class="lg:w-36 lg:h-36 h-28 w-28 object-cover rounded-full transparent transform rotate-12 border-gray-200 border overflow-hidden">
+                <img class="w-full h-full object-contain" data-alt="Texture of crumbling earth and soil"
+                    src="product1.png" />
+            </div>
+            <div
+                class="lg:w-44 lg:h-44 h-16 w-16 object-cover rounded-full transparent transform -rotate-6 border-gray-200 border overflow-hidden  -mt-[2rem] lg:-mt-[4rem] lg:mr-24 mr-12 ">
+                <img class="w-full h-full object-contain" data-alt="Texture of crumbling earth and soil"
+                    src="product2.png" />
+            </div>
+            <div
+                class="lg:w-28 lg:h-28 h-22 w-22 object-cover rounded-full transparent transform -rotate-6 border-gray-200 border overflow-hidden lg:-mt-[4rem] -mt-[2rem] lg:mr-8  ">
+                <img class="w-full h-full object-contain" data-alt="Texture of crumbling earth and soil"
+                    src="product3.png" />
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    <div class="lg:p-12 p-5 w-full">
+        <div class=" text-center">
+            <h2 class="font-poppins">Why Biodegredeable ?</h2>
+            <p class="lg:!text-sm/8 text-sm/4 tracking-wide leading-relaxed lg:px-[25%] py-2">Biodegradable products naturally decompose
+                within three months, keeping the environment clean and healthy.</p>
+        </div>
+        <div class="flex justify-center">
+            <div class="grid lg:grid-cols-3 lg:gap-10 lg:pt-12 pt-6 grid-cols-1 gap-y-4 lg:gap-y-0 ">
+                <div class="flex flex-col items-center">
+                    <div class="w-[80px] h-[80px] ">
+                        <img src="marine.png" class="w-full h-full object-cover" alt="plastic">
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="font-poppins text-center">The Plastic Problem</h3>
+                        <p class="text-center lg:!text-sm/8 text-sm/4 font-inter tracking-wide leading-relaxed py-2 text-gray-700">
+                            Traditional
+                            plastic bags
+                            persist in our environment for centuries, harming wildlife and polluting
+                            our ecosystems.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-[80px] h-[80px] ">
+                        <img src="natural-solution.png" class="w-full h-full object-cover" alt="plastic">
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="font-poppins text-center">The Natural Solution</h3>
+                        <p class="text-center lg:!text-sm/8 text-sm/4 font-inter tracking-wide leading-relaxed py-2 text-gray-700">
+                            Traditional
+                            Biodegradable bags are crafted from plant-based materials, designed to break down naturally
+                            and return to the earth.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-[80px] h-[80px] ">
+                        <img src="recycle.png" class="w-full h-full object-cover" alt="plastic">
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="font-poppins text-center">The Lasting Benefit</h3>
+                        <p class="text-center lg:!text-sm/8 text-sm/4 font-inter tracking-wide leading-relaxed py-2 text-gray-700">
+                            By choosing biodegradable, you help reduce landfill waste, conserve resources, and protect
+                            our planet for future generations.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="lg:p-12  p-5">
+        <div class=" text-center">
+            <h2 class="font-poppins">Our Featured Products</h2>
+            <p class="lg:!text-sm/8 text-sm/4 tracking-wide leading-relaxed lg:px-[25%] py-2">Biodegradable products naturally decompose
+                within three months, keeping the environment clean and healthy.</p>
+        </div>
+        <div class="swiper SliderOne  !pt-8 !pb-10 ">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide lg:!w-[220px] lg:!h-[220px] !w-[200px] !h-[200px]  rounded-2xl !overflow-hidden">
+                    <img src="https://content.jdmagicbox.com/quickquotes/images_main/plastic-printed-biodegradable-plastic-bag-f36ee9ji.jpg?impolicy=queryparam&im=Resize=(360,360),aspect=fit"
+                        class="object-cover h-full w-full">
+                </div>
+
+                <div class="swiper-slide lg:!w-[220px] lg:!h-[220px] !w-[200px] !h-[200px] rounded-2xl !overflow-hidden">
+                    <img src="https://i5.walmartimages.com/asr/07754011-6476-4e33-a3e7-0d0eb7e91582.c6f7ca698cc50333ac4e5ecbac4c78d4.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+                        class="object-cover h-full w-full">
+                </div>
+                <div class="swiper-slide lg:!w-[220px] lg:!h-[220px] !w-[200px] !h-[200px] rounded-2xl !overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwmOa3fGhTMFGzzcjrHsmqPQMgK-ENETYfMD6aeVNbuZj09v08K01dV0wzPZjJ9k_lGx8&usqp=CAU"
+                        class="object-cover h-full w-full">
+                </div>
+                <div class="swiper-slide lg:!w-[220px] lg:!h-[220px] !w-[200px] !h-[200px] rounded-2xl !overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaY1WbhFRRfY3Yn2oXqQqK3UdpPiKF8l_Mcw&s"
+                        class="object-cover h-full w-full">
+                </div>
+                <div class="swiper-slide lg:!w-[220px] lg:!h-[220px] !w-[200px] !h-[200px] rounded-2xl !overflow-hidden">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/330866498/WN/YU/FS/161552557/biodegradable-plastic-bag-500x500.jpg"
+                        class="object-cover h-full w-full">
+                </div>
+                <div class="swiper-slide lg:!w-[220px] lg:!h-[220px] !w-[200px] !h-[200px] rounded-2xl !overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQafKUJJUUQAgD0oOwFh7O2C48KKJMRf_x95SnERNLxpUWHEa3f03xDYwi9jDZo_6NBGYU&usqp=CAU"
+                        class="object-cover h-full w-full ">
+                </div>
+
+            </div>
+            <div class="swiper-pagination !pt-8"></div>
+
+        </div>
+
+    </div>
+
+    
+    <div class="lg:p-12 p-5">
+        <div class=" text-center">
+            <h2 class="font-poppins leading-relaxed">Unveiling Our Identity</h2>
+            <p class="lg:!text-sm/8 text-sm/4 tracking-wide leading-relaxed lg:px-[25%] py-2">
+                We aim to reduce environmental impact by offering biodegradable products that support cleaner living and
+                promote responsible waste management.
+            </p>
+        </div>
+        <div class="relative bg-white  grid lg:grid-cols-2 grid-cols-1  lg:h-[320px] rounded-3xl mt-[120px] lg:p-[10%]  lg:gap-[20%]">
+            <div
+                class="bg-[#389537] absolute -top-[100px] lg:h-[200px] justify-center lg:left-[20%] lg:right-[20%] -left-2 -right-2 rounded-3xl ">
+                <div class="w-full flex justify-between lg:px-12 px-5 gap-4">
+                    <div class="flex justify-center flex-col items-center  transform -translate-y-10">
+                        <div class="lg:w-10 lg:h-10 w-8 h-8 overflow-hidden mt-0">
+                            <img src="shield.png" alt="shield" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="text-white font-normal font-poppins text-md tracking-wide my-2">Safety</h5>
+                    </div>
+                    <div class="flex justify-center flex-col items-center pt-30 ">
+                        <div class="lg:w-10 lg:h-10 h-8 h-8 overflow-hidden ">
+                            <img src="efficiency.png" alt="efficient" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="text-white font-normal font-poppins text-md tracking-wide my-2">Efficient</h5>
+                    </div>
+                    <div class="flex justify-center flex-col items-center pt-30">
+                        <div class="lg:w-10 lg:h-10 h-8 w-8 overflow-hidden">
+                            <img src="precision.png" alt="precision" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="text-white font-normal font-poppins text-md tracking-wide my-2">Precision</h5>
+                    </div>
+                    <div class="flex justify-center flex-col items-center transform -translate-y-10">
+                        <div class="lg:w-10 lg:h-10 w-8 h-8 overflow-hidden">
+                            <img src="inspiration.png" alt="idea" class="w-full h-full object-cover">
+                        </div>
+                        <h5 class="text-white font-normal font-poppins text-md tracking-wide my-2 px-2">Innovation</h5>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex gap-1 items-center lg:mt-10 mt-40">
+                    <div class="w-6 h-6 ">
+                        <img src="monitoring.png" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-poppins text-center text-[#389537]">Vision</h3>
+
+                </div>
+                <p class="my-2 lg:!text-sm/8 text-sm/4 font-inter tracking-wide leading-relaxed py-2 text-gray-700">To build a future
+                    where single-use plastics are replaced with sustainable, plant-based solutions —
+                    making clean, green living accessible to everyone </p>
+            </div>
+            <div>
+                <div class="flex gap-1 items-center mt-10 ">
+                    <div class="w-6 h-6 overflow-hidden">
+                        <img src="mission.png" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-poppins text-center text-[#389537]">Mission</h3>
+
+                </div>
+                <p class="my-2 lg:!text-sm/8 text-sm/4 font-inter tracking-wide leading-relaxed py-2 text-gray-700">
+                    To create eco-friendly, biodegradable alternatives to plastic bags that reduce pollution, protect
+                    nature, and promote sustainable living in our community .
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="lg:p-12 p-5">
+        <div class=" text-center">
+            <h2 class="font-poppins leading-relaxed">The Natural Life Cycle of Our Products</h2>
+            <p class="lg:!text-sm/8 text-sm/8 tracking-wide leading-relaxed lg:px-[25%] py-2">
+                Our products go through a natural process from start to finish. Each step helps keep them pure, safe,
+                and high-quality.
+            </p>
+        </div>
+        <div class="grid lg:grid-cols-5 lg:gap-10 pt-8 grid-cols-2 gap-4">
+            <div
+                class="bg-[url('https://t3.ftcdn.net/jpg/02/57/58/20/360_F_257582025_LUf6zGRPA0x0OGaLFS1UJIgkRKrrZhAk.webp')] h-[250px] rounded-2xl p-5 relative">
+                <img src="https://biodegradablebottles.eu/wp-content/uploads/elementor/thumbs/imageedit_1_4758200150-1-e1617721812507-p5bnaug1xsdigx7i2imo88j2v3ee7c95pg1amuz0cy.png"
+                    class="w-full h-full object-contain">
+                <div
+                    class="absolute top-0 right-0 bg-[#389737] text-center text-white w-12 h-6 rounded-bl-2xl rounded-tr-2xl">
+                    01</div>
+            </div>
+            <div
+                class="bg-[url('https://t3.ftcdn.net/jpg/02/57/58/20/360_F_257582025_LUf6zGRPA0x0OGaLFS1UJIgkRKrrZhAk.webp')] h-[250px] rounded-2xl p-5 relative">
+                <img src="https://biodegradablebottles.eu/wp-content/uploads/elementor/thumbs/imageedit_1_4758200150-1-e1617721812507-p5bnaug1xsdigx7i2imo88j2v3ee7c95pg1amuz0cy.png"
+                    class="w-full h-full object-contain">
+                <div
+                    class="absolute top-0 right-0 bg-[#389737] text-center text-white w-12 h-6 rounded-bl-2xl rounded-tr-2xl">
+                    60</div>
+            </div>
+            <div
+                class="bg-[url('https://t3.ftcdn.net/jpg/02/57/58/20/360_F_257582025_LUf6zGRPA0x0OGaLFS1UJIgkRKrrZhAk.webp')] h-[250px] rounded-2xl p-5 relative">
+                <img src="https://biodegradablebottles.eu/wp-content/uploads/elementor/thumbs/imageedit_1_4758200150-1-e1617721812507-p5bnaug1xsdigx7i2imo88j2v3ee7c95pg1amuz0cy.png"
+                    class="w-full h-full object-contain">
+                <div
+                    class="absolute top-0 right-0 bg-[#389737] text-center text-white w-12 h-6 rounded-bl-2xl rounded-tr-2xl">
+                    90</div>
+            </div>
+            <div
+                class="bg-[url('https://t3.ftcdn.net/jpg/02/57/58/20/360_F_257582025_LUf6zGRPA0x0OGaLFS1UJIgkRKrrZhAk.webp')] h-[250px] rounded-2xl p-5 relative">
+                <img src="https://biodegradablebottles.eu/wp-content/uploads/elementor/thumbs/imageedit_1_4758200150-1-e1617721812507-p5bnaug1xsdigx7i2imo88j2v3ee7c95pg1amuz0cy.png"
+                    class="w-full h-full object-contain">
+                <div
+                    class="absolute top-0 right-0 bg-[#389737] text-center text-white w-12 h-6 rounded-bl-2xl rounded-tr-2xl">
+                    120</div>
+            </div>
+            <div
+                class="bg-[url('https://t3.ftcdn.net/jpg/02/57/58/20/360_F_257582025_LUf6zGRPA0x0OGaLFS1UJIgkRKrrZhAk.webp')] h-[250px] rounded-2xl p-5 relative">
+
+                <div
+                    class="absolute top-0 right-0 bg-[#389737] text-center text-white w-12 h-6 rounded-bl-2xl rounded-tr-2xl">
+                    180</div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="lg:p-12 p-5">
+        <div class=" text-center">
+            <h2 class="font-poppins leading-relaxed">Voice of Trust</h2>
+            <p class="lg:!text-sm/8 text-sm/4 tracking-wide leading-relaxed lg:px-[25%] py-2">
+                Trusted by those who value quality.
+                Driven by commitment, delivered with integrity.
+            </p>
+        </div>
+        <div class="lg:columns-3 gap-4 mt-8 columns-1">
+            <div class="break-inside-avoid mb-4 border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
+                <div class="mb-4 flex gap-2">
+                    <div class="bg-gray-200 rounded-full lg:w-14 lg:h-14 w-10 h-10 overflow-hidden">
+                        <img src="https://abibiodegradeable-xogcnyfb.on-forge.com/storage/14/01K8SYGTV9VCV9825MVJQ2P16W.jpeg"
+                            class="h-full w-full object-cover">
+
+                    </div>
+                    <div>
+                        <h4>John doe</h4>
+                        <span class="text-gray-500">Owner,greenmart nepal</span>
+                    </div>
+                </div>
+
+                <p class="my-2 !text-sm/8 font-inter tracking-wide leading-relaxed py-2 text-gray-500">
+                    I recently discovered this biodegradable website and I’m amazed! Their products are eco-friendly,
+                    high-quality, and easy to order. It feels great supporting a brand that truly cares about the
+                    environment and sustainability.
+                </p>
+            </div>
+            <div class="break-inside-avoid mb-4 border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
+
+                <div class="mb-4 flex gap-2">
+                    <div class="bg-gray-200 rounded-full lg:w-14 lg:h-14 w-10 h-10 overflow-hidden">
+                        <img src="https://abibiodegradeable-xogcnyfb.on-forge.com/storage/15/01K8SYJGFNX4A478EJRN07B0KQ.webp"
+                            class="h-full w-full object-cover">
+
+                    </div>
+                    <div>
+                        <h4>Rajiv thapa</h4>
+                        <span class="text-gray-500">Manager,cafe sunrise</span>
+                    </div>
+                </div>
+                <p class="my-2 !text-sm/8 font-inter tracking-wide leading-relaxed py-2 text-gray-500">
+                    Switching to biodegradable products was so easy and satisfying.
+
+                </p>
+            </div>
+            <div class="break-inside-avoid mb-4 border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
+                <div class="mb-4 flex gap-2">
+                    <div class="bg-gray-200 rounded-full lg:w-14 lg:h-14 w-10 h-10 overflow-hidden">
+                        <img src="https://abibiodegradeable-xogcnyfb.on-forge.com/storage/17/01K8SZ1QAMZ1QVCEDK1DJVWSSV.jpeg"
+                            class="h-full w-full object-cover">
+
+                    </div>
+                    <div>
+                        <h4>Maya gurung</h4>
+                        <span class="text-gray-500">Event Coordinator, EcoFest </span>
+                    </div>
+                </div>
+                <p class="text-gray-500 my-2 !text-sm/8 font-inter tracking-wide leading-relaxed py-2 text-gray-500">
+                    I absolutely love this biodegradable website! Their products are eco-friendly, high-quality, and
+                    beautifully designed. Shopping here makes me feel like I’m making a real difference for the planet,
+                    and the experience is seamless an.
+                </p>
+            </div>
+            <div class="break-inside-avoid mb-4 border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
+                <div class="mb-4 flex gap-2">
+                    <div class="bg-gray-200 rounded-full lg:w-14 lg:h-14 w-10 h-10 overflow-hidden">
+                        <img src="https://abibiodegradeable-xogcnyfb.on-forge.com/storage/14/01K8SYGTV9VCV9825MVJQ2P16W.jpeg"
+                            class="h-full w-full object-cover">
+
+                    </div>
+                    <div>
+                        <h4>John doe</h4>
+                        <span class="text-gray-500">Owner,greenmart nepal</span>
+                    </div>
+                </div>
+
+                <p class="my-2 !text-sm/8 font-inter tracking-wide leading-relaxed py-2 text-gray-500">
+                    I recently discovered this biodegradable website and I’m amazed! Their products are eco-friendly,
+                    high-quality, and easy to order. It feels great supporting a brand that truly cares about the
+                    environment and sustainability.
+                </p>
+            </div>
+            <div class="break-inside-avoid mb-4 border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
+                <div class="mb-4 flex gap-2">
+                    <div class="bg-gray-200 rounded-full lg:w-14 lg:h-14 w-10 h-10 overflow-hidden">
+                        <img src="https://abibiodegradeable-xogcnyfb.on-forge.com/storage/15/01K8SYJGFNX4A478EJRN07B0KQ.webp"
+                            class="h-full w-full object-cover">
+
+                    </div>
+                    <div>
+                        <h4>Rajiv thapa</h4>
+                        <span class="text-gray-500">Manager,cafe sunrise</span>
+                    </div>
+                </div>
+                <p class="my-2 !text-sm/8 font-inter tracking-wide leading-relaxed py-2 text-gray-500">
+                    Switching to biodegradable products was so easy and satisfying.
+
+                </p>
+            </div>
+            <div class="break-inside-avoid mb-4 border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
+                <div class="mb-4 flex gap-2">
+                    <div class="bg-gray-200 rounded-full lg:w-14 lg:h-14 w-10 h-10 overflow-hidden">
+                        <img src="https://abibiodegradeable-xogcnyfb.on-forge.com/storage/15/01K8SYJGFNX4A478EJRN07B0KQ.webp"
+                            class="h-full w-full object-cover">
+
+                    </div>
+                    <div>
+                        <h4>Rajiv thapa</h4>
+                        <span class="text-gray-500">Manager,cafe sunrise</span>
+                    </div>
+                </div>
+                <p class="my-2 !text-sm/8 font-inter tracking-wide leading-relaxed py-2 text-gray-500">
+                    his biodegradable brand truly changed the way I shop. The quality is amazing, and every product
+                    thoughtfully made.
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div
+        class="lg:m-12 m-5 flex justify-center items-end relative    items-center   lg:h-[420px] h-[300px]  rounded-xl bg-gradient-to-r from-[#389537] via-green-200 to-[#389537] ">
+        <div class="w-full lg:h-[420px] h-[300px] bg-[#389537]/20 absolute  flex justify-center">
+            <div class=" mt-10 lg:w-[40%] w-[90%]  ">
+                <div>
+                    <h2 class="font-poppins  leading-relaxed text-white text-center">Let's save the
+                        world together!</h2>
+                    <p class=" lg:!text-sm/8 text-sm/4 font-inter tracking-wide leading-relaxed py-2 text-white text-center">Every
+                        small
+                        choice
+                        matters.
+                        By switching to eco-friendly products, we can reduce waste, protect nature,
+                        and build a greener future for generations to come.</p>
+                    <div class="flex justify-center">
+                        <div class="flex gap-2 btn secondary !h-8 mt-8 w-fit">
+                            <p>Let's Connect</p>
+                            <div class="w-6 h-6 flex justify-center items-center rounded-full bg-black/15">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+</svg>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" h-[300px] flex items-end">
+            <img src="earth.png" class="w-full h-full object-cover">
+        </div>
+    </div>
+</div>
+
+
+</div>
+    <footer class="mx-12 py-4 mt-12 border-t border-gray-200/40 ">
+    <ul class="lg:flex lg:justify-between grid  items-center pb-4">
+        <li class="flex justify-center">
+            <a href="http://127.0.0.1:8000">
+                <div class="w-18 h-12 overflow-hidden">
+                    <img src="https://abi.on-forge.com/abi.png"
+                        class="w-full h-full object- contain object-center">
+                </div>
+            </a>
+        </li>
+        <li class="mt-4 lg:mt-0">
+            <ul class="flex gap-8 items-center  justify-center text-gray-500 leading-relaxed">
+                <li>
+                    <a href="#">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Contact</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span>Terms and Conditions</span>
+                    </a>
+                </li>
+            </ul>
+
+        </li>
+        <li class="flex items-center gap-6 mt-4 lg:mt-0 justify-center">
+            <a class="rounded-full  border border-gray-200 flex justify-center items-center w-8 h-8">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+            </a>
+            <a class="rounded-full  border border-gray-200 flex justify-center items-center w-8 h-8">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                </svg>
+            </a>
+            <a class="rounded-full  border border-gray-200 flex justify-center items-center w-8 h-8">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+            </a>
+            <a class="rounded-full  border border-gray-200 flex justify-center items-center w-8 h-8">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                    </path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    <div class="mt-4 pt-4 border-t border-gray-200/40 flex justify-center items-center">
+        <div class="flex gap-1 items-center"><span class="text-gray-500 ">Made with </span>
+            <svg class="w-5 h-5 text-[#389537]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path d="M2 6.342a3.375 3.375 0 0 1 6-2.088 3.375 3.375 0 0 1 5.997 2.26c-.063 2.134-1.618 3.76-2.955 4.784a14.437 14.437 0 0 1-2.676 1.61c-.02.01-.038.017-.05.022l-.014.006-.004.002h-.002a.75.75 0 0 1-.592.001h-.002l-.004-.003-.015-.006a5.528 5.528 0 0 1-.232-.107 14.395 14.395 0 0 1-2.535-1.557C3.564 10.22 1.999 8.558 1.999 6.38L2 6.342Z"/>
+</svg>            <span class="text-gray-500">by bytencoder</span>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper(".SliderOne", {
+                freeMode: true,
+                loop: true,
+                autoplay: {
+                    delay: 3000, // 3 seconds
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    }, // Mobile
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }, // Tablet
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 30
+                    } // Desktop
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper(".SliderTwo", {
+                freeMode: true,
+                loop: true,
+                autoplay: {
+                    delay: 3000, // 3 seconds
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    }, // Mobile
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    }, // Tablet
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    } // Desktop
+                }
+            });
+        });
+    </script>
+<!-- Livewire Scripts -->
+<script src="/livewire/livewire.js?id=df3a17f2"   data-csrf="uRa8lwu5eHaL22bkKl0rTZsv037dzcBLr9vQPSTT" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</body>
+
+</html>
