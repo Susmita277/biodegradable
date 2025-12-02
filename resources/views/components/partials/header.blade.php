@@ -1,0 +1,62 @@
+<div class="px-12 sticky top-0 bg-[#fbf8ef] z-60 hidden lg:block">
+    <ul class="flex justify-between items-center py-2 ">
+        <li>
+            <a href="{{ route('home') }}">
+                <div class="w-18 h-12 2xl:w-24 2xl:h-20 overflow-hidden">
+                    <img src="{{ asset('abi.png') }}" class="w-full h-full object- contain object-center">
+                </div>
+            </a>
+        </li>
+        <li class="flex items-center font-inter text-xs gap-8  justify-center ml-20">
+            <a href="{{ route('home') }}">
+                <p>Home</p>
+            </a>
+            <a href="{{ route('about') }}">
+                <p>About Us</p>
+            </a>
+            <a href="{{ route('why-us') }}">
+                <p>Why Us</p>
+            </a>
+            <a href="{{ route('contact') }}">
+                <p>Contact</p>
+            </a>
+        </li>
+        <li class="flex gap-2  justify-center">
+            <button class="btn secondary">Explore</button>
+            <button class="btn highlight">Get a Quote</button>
+        </li>
+    </ul>
+</div>
+
+<!-- Small Screen Header -->
+<div class="lg:hidden  px-5 py-2 sticky top-0 bg-[#fbf8ef] z-60" x-data="{ open: false }">
+    <div class="flex items-center justify-between w-full">
+        <!-- Logo -->
+        <a href="{{ route('home') }}" class="transform -translate-x-10">
+            <div class="w-24 h-12  overflow-hidden">
+                <img src="{{ asset('abi.png') }}" class="w-full h-full object-contain ">
+            </div>
+        </a>
+        <!-- Menu Icon -->
+        <button @click="open = !open" class="text-gray-800 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                <path x-show="open" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div x-show="open" x-transition
+        class="absolute top-full left-0 w-full bg-white  mt-2 rounded-b-lg bottom-0 h-screen">
+        <ul class="flex flex-col gap-4 p-4 font-inter text-sm">
+            <li><a href="{{ route('home') }}" class="block hover:text-[#389537]">Home</a></li>
+            <li><a href="{{ route('about') }}" class="block hover:text-[#389537]">About Us</a></li>
+            <li><a href="{{ route('why-us') }}" class="block hover:text-[#389537]">Why Us</a></li>
+            <li><a href="{{ route('contact') }}" class="block hover:text-[#389537]">Contact</a></li>
+        </ul>
+    </div>
+</div>
