@@ -50,7 +50,7 @@
                     }, // Tablet
                     1024: {
                         slidesPerView: 5,
-                        spaceBetween: 30
+                        spaceBetween: 16
                     },
                     1536: {
                         slidesPerView: 5,

@@ -3,7 +3,7 @@
         <li>
             <a href="{{ route('home') }}">
                 <div class="w-18 h-12 2xl:w-24 2xl:h-20 overflow-hidden">
-                    <img src="{{ asset('abi.png') }}" class="w-full h-full object- contain object-center">
+                    <img src="https://abi.on-forge.com/abi.png" class="w-full h-full object- contain object-center">
                 </div>
             </a>
         </li>
