@@ -56,11 +56,24 @@ blocks:
   hero:
     title: 'Nature-Inspired Products Designed for a Better Planet'
     subtitle: 'We design biodegradable products that make life easier while keeping our planet cleaner.'
-    background_image_desktop: 01KBCGEG180BZXA91QAJE8CCGJ.jpg
-    background_image_mobile: 01KBCGEG2E9Z8T50YXR9CK297Z.png
+    background_image_desktop: 01KBMFATR6QE6JF5VX8GFNXQ00.png
+    background_image_mobile: 01KBMFATRJDG0EVV3CP9BAFCYE.png
     button_label: 'Get started'
     button_url: 'https://bytencoder.com.np'
     icon: hugeicons-activity-02
+    rightsideimages:
+      - { image: [01KBMB2BRS4M5YGR9N1WHR2AGD.png, 01KBMB2BRXWM7FY155JA5Z32SB.png, 01KBMB2BS33DRNW244SGHGNNBX.png] }
+    leftsideimages:
+      - { image: [01KBMB2BSBTAGXCH69FZM83H73.png, 01KBMB2BSGTYJ0BC4W3CRRRYCG.png, 01KBMB2BSP1V3VB4HVZGWKTYMN.png] }
+    buttons:
+      - { button_icon: heroicon-c-arrow-trending-up, button_label: 'Green Solutions', button_url: '#green_solution' }
+      - { button_icon: heroicon-s-arrow-right, button_label: "Let's Connect", button_url: 'http://127.0.0.1:8000/contact' }
+    icon1: heroicon-c-face-smile
+    icon2: heroicon-m-arrow-right
+    icon3: hugeicons-plant-02
+    highlight_title: 'clean environments'
+    icon4: heroicon-m-arrow-right
+    icon5: hugeicons-plant-01
   features:
     heading: 'Why Biodegredeable ?'
     description: 'Biodegradable products naturally decompose within three months, keeping the environment clean and healthy.'
