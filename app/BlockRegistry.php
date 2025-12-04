@@ -13,6 +13,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
+use Guava\IconPicker\Forms\Components\IconPicker;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
@@ -29,6 +30,10 @@ class BlockRegistry
             'why_us' => [
                 'label' => 'Why Us',
                 'schema' => self::WhyUsBlock()
+            ],
+            'contact_info' => [
+                'label' => 'Company Contact Info',
+                'schema' => self::ContactInfoBlock()
             ],
             'about_hero' => [
                 'label' => 'About Hero section',
@@ -125,16 +130,16 @@ class BlockRegistry
                     ->schema([
                         Grid::make(2)
                             ->schema([
-                            FileUpload::make('background_image_desktop')
+                                FileUpload::make('background_image_desktop')
                                     ->label('Desktop Background Image')
-                                    
+
                                     ->imageEditor()
                                     ->imagePreviewHeight('200px')
                                     ->required(),
 
-                            FileUpload::make('background_image_mobile')
+                                FileUpload::make('background_image_mobile')
                                     ->label('Mobile Background Image')
-                                    
+
                                     ->imageEditor()
                                     ->imagePreviewHeight('200px'),
                             ]),
@@ -195,6 +200,56 @@ class BlockRegistry
                     ]),
             ]);
     }
+    public static function ContactInfoBlock(): Block
+    {
+        return Block::make('contact_info')
+            ->label('About Hero Section')
+            ->icon('heroicon-o-photo')
+            ->schema([
+                Section::make('Content')
+                    ->description('Main text and button details for the hero section.')
+                    ->schema([
+                        Grid::make(2)
+                            ->schema([
+                                TextInput::make('title')
+                                    ->label('Hero Title')
+                                    ->placeholder('Enter the main headline')
+                                    ->required()
+                                    ->maxLength(100),
+
+                                Textarea::make('subtitle')
+                                    ->label('Hero Subtitle')
+                                    ->placeholder('Enter a supporting subtitle or tagline')
+                                    ->rows(3)
+                                    ->required(),
+                            ]),
+
+                        Repeater::make('infos')
+                            ->label('Infos')
+                            ->schema([
+                                Grid::make(2)
+                                    ->schema([
+                                        IconPicker::make('icon')
+                                            ->label("Contact icon")
+                                            ->required(),
+
+                                        TextInput::make('title')
+                                            ->label('ContactInfo Title')
+                                            ->placeholder('Enter feature title')
+                                            ->required()
+                                            ->maxLength(100),
+
+                                        TextInput::make('subtitle')
+                                            ->label('ContactInfo Subtitle')
+                                            ->placeholder('Enter feature subtitle')
+                                            ->required()
+                                            ->maxLength(100),
+
+                                    ]),
+                            ]),
+                    ]),
+            ]);
+    }
 
     public static function WhyUsBlock(): Block
     {
@@ -226,62 +281,14 @@ class BlockRegistry
                     ->schema([
                         Grid::make(2)
                             ->schema([
-                            FileUpload::make('images')
+                                FileUpload::make('image')
                                     ->label('Enter images')
-                                    ->multiple()
-                                    
                                     ->imageEditor()
                                     ->imagePreviewHeight('200px')
                                     ->required(),
                             ]),
                     ]),
 
-                Section::make('Call to Action')
-                    ->description('Configure the button shown on the hero section.')
-                    ->schema([
-                        Grid::make(2)
-                            ->schema([
-                                TextInput::make('button_label')
-                                    ->label('Button Text')
-                                    ->placeholder('Learn More')
-                                    ->required(),
-
-                                TextInput::make('button_url')
-                                    ->label('Button Link')
-                                    ->datalist(function () {
-                                        $routes = collect(Route::getRoutes())
-                                            ->map(function ($route) {
-                                                return [
-                                                    'uri' => $route->uri(),
-                                                ];
-                                            });
-                                        return $routes->pluck('uri');
-                                    })
-                                    ->placeholder('https://example.com')
-                                    ->url()
-                                    ->required(),
-
-                                TextInput::make('second_button_label')
-                                    ->label('Button Text')
-                                    ->placeholder('Learn More')
-                                    ->required(),
-
-                                TextInput::make('second_button_url')
-                                    ->label('Button Link')
-                                    ->datalist(function () {
-                                        $routes = collect(Route::getRoutes())
-                                            ->map(function ($route) {
-                                                return [
-                                                    'uri' => $route->uri(),
-                                                ];
-                                            });
-                                        return $routes->pluck('uri');
-                                    })
-                                    ->placeholder('https://example.com')
-                                    ->url()
-                                    ->required(),
-                            ]),
-                    ]),
             ]);
     }
 
@@ -330,7 +337,7 @@ class BlockRegistry
                                             ->required(),
                                     ]),
 
-                            FileUpload::make('image')
+                                FileUpload::make('image')
                                     ->label('Feature Image')
                                     ->imageEditor()
                                     ->required(),
@@ -357,7 +364,7 @@ class BlockRegistry
                     ->schema([
                         Grid::make(2)
                             ->schema([
-                            FileUpload::make('image')
+                                FileUpload::make('image')
                                     ->label('Image')
                                     ->imageEditor()
                                     ->required(),
@@ -405,7 +412,7 @@ class BlockRegistry
                                     ->rows(3),
                             ]),
 
-                    FileUpload::make('images')
+                        FileUpload::make('images')
                             ->label('Gallery Images')
                             ->multiple()
                             ->imageEditor()
@@ -593,7 +600,7 @@ class BlockRegistry
                             ->required()
                             ->columnSpan(2),
 
-                    FileUpload::make('author_image')
+                        FileUpload::make('author_image')
                             ->imageEditor()
                             ->required()
                             ->columnSpan(2),
@@ -639,7 +646,7 @@ class BlockRegistry
                             ->label('quote')
                             ->required(),
 
-                    FileUpload::make('avatar')
+                        FileUpload::make('avatar')
                             ->label('Member Avatar')
                             ->imageEditor()
                             ->required(),
@@ -667,7 +674,7 @@ class BlockRegistry
                             ->label('Description')
                             ->required(),
 
-                    FileUpload::make('avatar')
+                        FileUpload::make('avatar')
                             ->label('Member Avatar')
                             ->imageEditor()
                             ->required(),
@@ -695,7 +702,7 @@ class BlockRegistry
                             ->label('Description')
                             ->required(),
 
-                    FileUpload::make('avatar')
+                        FileUpload::make('avatar')
                             ->label(' Avatar')
                             ->imageEditor()
                             ->required(),
@@ -769,7 +776,7 @@ class BlockRegistry
                     ->url()
                     ->required(),
 
-            FileUpload::make('image')
+                FileUpload::make('image')
                     ->label('Background Image')
                     ->imageEditor()
                     ->required(),
@@ -870,7 +877,7 @@ class BlockRegistry
                     TextInput::make('title')->required(),
                     FileUpload::make('image')
                         ->label('Mission_Visions  Images')
-                        
+
                         ->imageEditor()
                         ->required()
                         ->helperText('You can drag to reorder the gallery images.'),
@@ -880,7 +887,7 @@ class BlockRegistry
                     TextInput::make('title')->required(),
                     Textarea::make('description')->required(),
                     FileUpload::make('image')
-                        
+
                         ->imageEditor()
                         ->required()
                         ->columnSpan(2),
@@ -905,7 +912,7 @@ class BlockRegistry
                         ->required(),
                     FileUpload::make('image')
                         ->label('Mission_Visions  Images')
-                        
+
                         ->reorderable()
                         ->imageEditor()
                         ->required()
