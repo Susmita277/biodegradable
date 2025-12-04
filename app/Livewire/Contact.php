@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\ContactMessage;
 use App\Traits\HasPageBlocks;
 
 /**
@@ -17,6 +18,49 @@ use App\Traits\HasPageBlocks;
 class Contact extends Component
 {
     use HasPageBlocks;
+    
+    public $name;
+    public $email;
+    public $message;
+    public $successMessage;
+
+    public function rules(): array
+    {
+        return [
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'message' => 'required|string',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Please provide name.',
+            'email.required' => 'Please provide email.',
+            'email.email' => 'Please provide email.',
+            'message.required' => 'Please provide message.'
+        ];
+    }
+
+
+
+    public function send()
+    {
+        $this->validate();
+
+        ContactMessage::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'message' => $this->message,
+        ]);
+
+        $this->reset(array_keys($this->rules()));
+        $this->successMessage = "Your message has been sent!";
+    }
+
+
+
 
     public function render()
     {
@@ -24,4 +68,3 @@ class Contact extends Component
         return view('livewire.contact');
     }
 }
- 
