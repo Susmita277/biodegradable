@@ -111,6 +111,12 @@ class BlockRegistry
                     ->schema([
                         Grid::make(2)
                             ->schema([
+                                IconPicker::make('icon1'),
+                                IconPicker::make('icon2'),
+                                IconPicker::make('icon3'),
+                                TextInput::make('highlight_title'),
+                                IconPicker::make('icon4'),
+                                IconPicker::make('icon5'),
                                 TextInput::make('title')
                                     ->label('Hero Title')
                                     ->placeholder('Enter the main headline')
@@ -145,11 +151,41 @@ class BlockRegistry
                             ]),
                     ]),
 
+                Section::make('Medias')
+                    ->description('upload images for side view left and right')
+                    ->schema([
+                        Grid::make(2),
+
+                        Repeater::make('rightsideimages')
+                            ->label('Right Side Images')
+                            ->schema([
+                                FileUpload::make('image')
+                                    ->label('Enter images')
+                                    ->imageEditor()
+                                    ->multiple()
+                                    ->imagePreviewHeight('200px')
+                                    ->required(),
+                            ]),
+                        Repeater::make('leftsideimages')
+                            ->label('Left Side Images')
+                            ->schema([
+                                FileUpload::make('image')
+                                    ->label('Enter images')
+                                    ->imageEditor()
+                                    ->multiple()
+                                    ->imagePreviewHeight('200px')
+                                    ->required(),
+                            ]),
+                    ]),
+
+
                 Section::make('Call to Action')
                     ->description('Configure the button shown on the hero section.')
                     ->schema([
-                        Grid::make(2)
+                        Grid::make(2),
+                        Repeater::make('buttons')
                             ->schema([
+                                IconPicker::make('button_icon'),
                                 TextInput::make('button_label')
                                     ->label('Button Text')
                                     ->placeholder('Learn More')
@@ -170,6 +206,7 @@ class BlockRegistry
                                     ->url()
                                     ->required(),
                             ]),
+
                     ]),
             ]);
     }
