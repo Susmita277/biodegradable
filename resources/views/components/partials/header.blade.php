@@ -9,21 +9,21 @@
         </li>
         <li class="flex items-center font-inter text-xs gap-8  justify-center ml-20">
             <a href="{{ route('home') }}">
-                <p>Home</p>
+                <p class="hover:text-[#389537]">Home</p>
             </a>
             <a href="{{ route('about') }}">
-                <p>About Us</p>
+                <p class="hover:text-[#389537]">About Us</p>
             </a>
             <a href="{{ route('why-us') }}">
-                <p>Why Us</p>
+                <p class="hover:text-[#389537]">Why Us</p>
             </a>
             <a href="{{ route('contact') }}">
-                <p>Contact</p>
+                <p class="hover:text-[#389537]">Contact</p>
             </a>
         </li>
         <li class="flex gap-2  justify-center">
-            <button class="btn secondary">Explore</button>
-            <button class="btn highlight">Get a Quote</button>
+           <a href="{{ route('home')}}#explore" class="smooth transition-all"> <button class="btn secondary">Explore</button></a>
+          <a href="{{ route('contact')}}">  <button class="btn highlight">Get a Quote</button></a>
         </li>
     </ul>
 </div>
