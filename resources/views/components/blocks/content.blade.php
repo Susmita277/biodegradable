@@ -7,7 +7,7 @@
 <div>
     @foreach ($contents as $content)
         <div 
-            class="lg:py-12 grid lg:grid-cols-2 grid-cols-1 gap-4 lg:px-40 p-5 2xl:px-50
+            class="lg:py-12 grid lg:grid-cols-2 grid-cols-1 gap-4 lg:px-40 p-5 2xl:px-50 2xl:py-14 
             {{ $loop->iteration % 2 == 0 ? 'lg:[&>*:first-child]:order-2' : '' }}">
             
             <!-- Image -->

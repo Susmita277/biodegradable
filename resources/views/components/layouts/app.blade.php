@@ -60,6 +60,38 @@
             });
         });
         document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper(".SliderThree", {
+                freeMode: true,
+                loop: true,
+                autoplay: {
+                    delay: 3000, // 3 seconds
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    }, // Mobile
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    }, // Tablet
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 16
+                    },
+                    1536: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    }
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
             var swiper = new Swiper(".SliderTwo", {
                 freeMode: true,
                 loop: true,

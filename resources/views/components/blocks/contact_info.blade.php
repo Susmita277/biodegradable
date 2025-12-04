@@ -8,7 +8,7 @@
 
 
 
-<div class="lg:px-40 lg:py-12 2xl:px-50 p-5 ">
+<div class="lg:px-40 lg:py-12 2xl:px-50 p-5 2xl:py-14 ">
     <div class="flex justify-center">
         <div class=" lg:w-[60%] w-full  text-center">
             <h2>{{ $title }}</h2>
@@ -23,7 +23,7 @@
             <div class="rounded-md p-5 shadow-sm">
                 <div class="flex flex-col items-center justify-center">
                     {{-- <x-heroicon-o-map-pin class="text-[#389537] w-10 h-10" /> --}}
-                    <x-dynamic-component :component="$info['icon']" class="2xl:w-10 2xl:h-10 lg:w-8 text-[#389537]" />
+                    <x-dynamic-component :component="$info['icon']" class="2xl:w-7 2xl:h-7 w-5 h-5 text-[#389537]" />
                     <div class="text-center pt-2">
                         <h6>{{ $info['title'] }}</h6>
                         <span class="text-gray-500">{{ $info['subtitle'] }}</span>

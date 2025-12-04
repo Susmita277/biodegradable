@@ -7,7 +7,7 @@
     $mission_visions = data_get($data, 'mission_visions');
 @endphp
 
-<div class="lg:pt-12 lg:px-40 2xl:px-50 p-5">
+<div class="lg:pt-12 lg:px-40 2xl:px-50 p-5 2xl:py-14">
     <div class=" text-center">
         <h2 class="font-poppins leading-relaxed">{{ $heading }}</h2>
         <p class="lg:!text-sm/8 text-sm/4 2xl:!text-xl/8 tracking-wide leading-relaxed lg:px-[25%] py-2">

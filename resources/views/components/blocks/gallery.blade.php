@@ -8,7 +8,7 @@
 @endphp
 
 {{-- highlighted products --}}
-<div class="lg:py-12  p-5 lg:px-40 2xl:px-50">
+<div class="lg:py-12  p-5 lg:px-40 2xl:px-50 2xl:py-14 " id="explore">
     <div class=" text-center">
         <h2 class="font-poppins">{{ $heading }}</h2>
         <p

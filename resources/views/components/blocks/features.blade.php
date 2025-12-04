@@ -9,7 +9,7 @@
     @endphp
     {{-- @dd($image); --}}
 
-    <div class="lg:py-12 lg:px-40 2xl:px-50 p-5 w-full">
+    <div class="lg:py-12 lg:px-40 2xl:px-50 p-5 w-full 2xl:py-14 " >
         <div class=" text-center">
             <h2 class="font-poppins">{{ $heading }}</h2>
             <p

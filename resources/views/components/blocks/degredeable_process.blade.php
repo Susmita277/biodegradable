@@ -6,7 +6,7 @@
         $process = data_get($data, 'process');
 
     @endphp
-    <div class="lg:py-12 lg:px-40 2xl:px-50 p-5">
+    <div class="lg:py-12 lg:px-40 2xl:px-50 p-5 2xl:py-14 " id="green_solution">
         <div class=" text-center">
             <h2 class="font-poppins leading-relaxed">{{$heading}}</h2>
             <p class="lg:!text-sm/8 text-sm/8 tracking-wide leading-relaxed lg:px-[25%] py-2 2xl:!text-xl/8">

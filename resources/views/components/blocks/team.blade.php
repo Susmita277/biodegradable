@@ -6,7 +6,7 @@
     $members = data_get($data, 'members');
 @endphp
 
-<div class="lg:py-12 p-5 lg:px-40 2xl:px-50">
+<div class="lg:py-12 p-5 lg:px-40 2xl:px-50 2xl:py-14">
     <div class="text-center ">
         <h2 class="font-poppins leading-relaxed">{{ $heading }}</h2>
         <p class="lg:!text-sm/8 text-sm/4 2xl:!text-xl/8 tracking-wide leading-relaxed lg:px-[25%] py-2">

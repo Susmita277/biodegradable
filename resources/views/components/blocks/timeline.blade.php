@@ -4,7 +4,7 @@
     $histories = data_get($data,'history');
 @endphp
 
-<div class="lg:px-40 lg:py-12 2xl:px-50 px-5 py-6 ">
+<div class="lg:px-40 lg:py-12 2xl:px-50 px-5 py-6 2xl:py-14 ">
     @foreach ($histories as $history)
         <div class="grid grid-cols-2 gap-12 relative w-full h-auto pb-4 lg:pb-10 2xl:pb-10">
 

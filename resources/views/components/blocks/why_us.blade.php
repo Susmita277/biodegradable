@@ -11,7 +11,7 @@
     $para2 = trim(substr($description, $half));
 @endphp
 
-<div class="grid grid-cols-3 py-12 gap-4 lg:px-40 2xl:px-50 px-5 ">
+<div class="grid grid-cols-3 py-12 gap-4 lg:px-40 2xl:px-50 px-5 2xl:py-14">
     <!-- Text Section -->
     <div class="w-full mt-6 lg:mt-0 col-span-2">
         <h2 class="pb-4 font-poppins">{{ $title }}</h2>

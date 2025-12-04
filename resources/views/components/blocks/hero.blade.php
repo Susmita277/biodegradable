@@ -3,97 +3,115 @@
     $data = data_get($block, 'data');
     $title = data_get($data, 'title');
     $subtitle = data_get($data, 'subtitle');
+    $icon1 = data_get($data, 'icon1');
+    $icon2 = data_get($data, 'icon2');
+    $icon3 = data_get($data, 'icon3');
+    $icon4 = data_get($data, 'icon4');
+    $icon5 = data_get($data, 'icon5');
     $button_label = data_get($data, 'button_label');
     $button_url = data_get($data, 'button_url');
     $background_image_desktop = broccoli_asset(data_get($data, 'background_image_desktop'));
     $background_image_mobile = broccoli_asset(data_get($data, 'background_image_mobile'));
-    $icon = 'hugeicons-activity-02';
+    $leftsideimages = data_get($data, 'leftsideimages');
+    $rightsideimages = data_get($data, 'rightsideimages');
+    $buttons = data_get($data, 'buttons');
 @endphp
 
-<div>
+<div class="pb-12 2xl:pb-14">
     <div class=" flex justify-center relative ">
         <div class="lg:w-[60%] md:[50%] w-full p-5 lg:px-12 lg:py-12 ">
             <div class="grid place-items-center ">
                 <div class="p-1 rounded-full  border border-gray-200 flex gap-1 justify-center w-fit mb-4 lg:mb-0">
-                    <div class="w-5 h-5 ">
-                        <img src="smiling-face.png" class="w-full h-full object-cover" />
-                    </div>
-                    <x-heroicon-o-arrow-right class="w-4 h-4" />
-                    <div class="w-5 h-5 overflow-hidden rounded-full">
-                        <img src="data:image/jpeg;base64,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"
-                            class="w-full h-full object-cover" />
-                    </div>
+                    <x-dynamic-component :component="$icon1" class="2xl:w-7 2xl:h-7 w-5 h-5 text-yellow-500" />
+                    <x-dynamic-component :component="$icon2" class="2xl:w-7 2xl:h-7 w-5 h-5 text-gray-700" />
+                    <x-dynamic-component :component="$icon3" class="2xl:w-7 2xl:h-7 w-5 h-5 text-[#389537]" />
+
                     <p>Clean environments</p>
-                    <x-heroicon-o-arrow-right class="w-4 h-4" />
-                    <div class="w-5 h-5 ">
-                        <img src="nature.png" class="w-full h-full object-cover" />
-                    </div>
+                    <x-dynamic-component :component="$icon4" class="2xl:w-7 2xl:h-7 w-5 h-5 text-gray-700" />
+                    <x-dynamic-component :component="$icon5" class="2xl:w-7 2xl:h-7 w-5 h-5 text-[#389537]" />
                 </div>
+
                 <h1 class="text-center py-2 font-poppins">{{ $title }}</h1>
                 <p
                     class="text-gray-500 text-center lg:!text-sm/8 text-sm/4 2xl:!text-xl/8 tracking-wide leading-relaxed lg:px-[20%] md:px-[15%] px-[5%] py-2 ">
                     {{ $subtitle }}</p>
-                <div class="flex gap-2 items-center justify-center mt-4">
-                    <div class="flex gap-2 btn main !h-8 2xl:!h-10">
-                        <x-heroicon-s-arrow-trending-up class="w-5 h-5" />
-                        <p>Green Solutions</p>
-                    </div>
 
-                    <a href="{{$button_url}}">
-                        <div class="flex gap-2 btn secondary !h-8 2xl:!h-10">
-                            <p>{{ $button_label }}</p>
-                            <div class="w-6 h-6 flex justify-center items-center rounded-full bg-black/15">
-                                <x-heroicon-o-arrow-right class="w-4 h-4" />
+                <div class="flex gap-2 items-center justify-center mt-4">
+                    @foreach ($buttons as $button)
+                        <a href="{{ $button['button_url'] }}">
+                            <div
+                                class="flex gap-2 btn  !h-8 2xl:!h-10 
+                {{ $loop->even ? 'bg-white text-black flex-row-reverse' : 'bg-[#389537] text-white' }}">
+                                <x-dynamic-component :component="$button['button_icon']" class="2xl:w-7 2xl:h-7 w-5 h-5" />
+
+                                <p>{{ $button['button_label'] }}</p>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    @endforeach
                 </div>
+
             </div>
             <div class="lg:flex md:flex justify-center hidden">
                 <div>
-                    <img src="https://static.vecteezy.com/system/resources/previews/068/872/072/non_2x/barren-tree-on-one-side-and-lush-green-tree-on-other-side-symbolize-contrast-between-life-and-death-showcasing-nature-resilience-and-beauty-png.png"
-                        class="w-full lg:h-[400px] md:h-[350px] h-[250px] 2xl:h-[550px] object-cover " />
+                    <img src="{{ $background_image_desktop }}"
+                        class="w-full lg:h-[380px] md:h-[350px] h-[250px] 2xl:h-[600px] object-cover " />
                 </div>
             </div>
         </div>
 
         <div
-            class="lg:flex md:flex hidden flex-col  justify-center text-center items-start lg:text-left absolute lg:left-0 -left-5  opacity-75 lg:top-[45%] top-[55%] 2xl:top-[40%]">
-            <div
-                class="flex  lg:justify-center lg:w-44 lg:h-44 h-28 w-28 2xl:w-64 2xl:h-64  rounded-full bg-transparent transform lg:-rotate-12 border-gray-200 border overflow-hidden">
-                <img src="https://abi.on-forge.com/rawmaterial.png" data-alt="Abstract representation of plant fibers and raw natural materials"
-                    class="w-full h-full object-contain" />
-            </div>
-            <div
-                class="flex  lg:justify-center lg:w-28 lg:h-28 h-16 w-16 2xl:w-40 2xl:h-40 transform rounded-full bg-transparent transform rotate-6 border-gray-200 border overflow-hidden  lg:ml-32 ml-10 lg:-mt-[3rem] -mt-[2rem]">
-                <img src="https://abi.on-forge.com/rawmaterial2.png" data-alt="Abstract representation of plant fibers and raw natural materials"
-                    class="w-full h-full object-contain" />
-            </div>
-            <div
-                class="flex  lg:justify-center w-22 h-22 lg:w-36 lg:h-36 2xl:w-48 2xl:h-48 transform rounded-full bg-transparent transform rotate-6 border-gray-200 border overflow-hidden  lg:ml-8 lg:-mt-[3rem] -mt-[2rem]">
-                <img src="https://abi.on-forge.com/rawmaterial3.png" data-alt="Abstract representation of plant fibers and raw natural materials"
-                    class="w-full h-full object-contain" />
-            </div>
+            class="lg:flex md:flex hidden flex-col justify-center text-center items-start lg:text-left absolute lg:left-0 -left-5 opacity-75 lg:top-[41%] top-[55%] 2xl:top-[36%]">
+
+            @foreach ($leftsideimages[0]['image'] as $index => $item)
+                @php
+                    //  variation
+                    $rotations = ['-rotate-12', 'rotate-6', 'rotate-6'];
+                    $margins = ['lg:ml-0 ml-0', 'lg:ml-26 ml-10', 'lg:ml-8 ml-0'];
+                    $marginTops = ['lg:-mt-0 -mt-0', 'lg:-mt-[3rem] -mt-[2rem]', 'lg:-mt-[3rem] -mt-[2rem]'];
+
+                    // Fallback values if images > 3
+                    $rotation = $rotations[$index] ?? '-rotate-6';
+                    $margin = $margins[$index] ?? 'lg:ml-0 ml-0';
+                    $marginTop = $marginTops[$index] ?? 'lg:-mt-[2rem] -mt-[1rem]';
+                @endphp
+
+                <div
+                    class="flex lg:justify-center
+               lg:w-36 lg:h-36 h-28 w-28
+                2xl:w-56 2xl:h-56
+                rounded-full bg-transparent border-gray-200 border overflow-hidden
+                transform {{ $rotation }} {{ $margin }} {{ $marginTop }}">
+                    <img src="{{ broccoli_asset($item) }}" class="w-full h-full object-contain" />
+                </div>
+            @endforeach
+
         </div>
-
-
         <div
-            class=" flex-col lg:flex md:flex hidden  justify-center text-center items-end lg:text-right lg:right-0 -right-5 absolute opacity-75 lg:top-[45%] top-[55%]">
-            <div
-                class="lg:w-36 lg:h-36 h-28 w-28  2xl:w-40 2xl:h-40  object-cover rounded-full transparent transform rotate-12 border-gray-200 border overflow-hidden">
-                <img class="w-full h-full object-contain" data-alt="Texture of crumbling earth and soil"
-                    src="https://abi.on-forge.com/product1.png" />
-            </div>
-            <div
-                class="lg:w-44 lg:h-44 h-16 w-16  2xl:w-64 2xl:h-64 object-cover rounded-full transparent transform -rotate-6 border-gray-200 border overflow-hidden  -mt-[2rem] lg:-mt-[4rem] lg:mr-24 mr-12 ">
-                <img class="w-full h-full object-contain" data-alt="Texture of crumbling earth and soil"
-                    src="https://abi.on-forge.com/product2.png" />
-            </div>
-            <div
-                class="lg:w-28 lg:h-28 h-22 w-22 2xl:w-48 2xl:h-48 object-cover rounded-full transparent transform -rotate-6 border-gray-200 border overflow-hidden lg:-mt-[4rem] -mt-[2rem] lg:mr-8  ">
-                <img class="w-full h-full object-contain" data-alt="Texture of crumbling earth and soil"
-                    src="https://abi.on-forge.com/product3.png" />
-            </div>
+            class=" flex-col lg:flex md:flex hidden  justify-center text-center items-end lg:text-right lg:right-0 -right-5 absolute opacity-75 lg:top-[41%] top-[55%] 2xl:top-[36%]">
+
+            @foreach ($rightsideimages[0]['image'] as $index => $item)
+                @php
+                    //variation
+                    $rotations = ['-rotate-12', 'rotate-6', 'rotate-6'];
+                    $margins = ['lg:ml-0 ml-0', 'lg:mr-26 mr-10', 'lg:m-8 ml-0'];
+                    $marginTops = ['lg:-mt-0 -mt-0', 'lg:-mt-[3rem] -mt-[1.5rem]', 'lg:-mt-[3rem] -mt-[2rem]'];
+
+                    // Fallback values if images > 3
+                    $rotation = $rotations[$index] ?? '-rotate-6';
+                    $margin = $margins[$index] ?? 'lg:ml-0 ml-0';
+                    $marginTop = $marginTops[$index] ?? 'lg:-mt-[2rem] -mt-[1rem]';
+                @endphp
+
+                <div
+                    class="flex lg:justify-center
+                lg:w-36 lg:h-36 h-28 w-28
+                2xl:w-56 2xl:h-56
+                rounded-full bg-transparent border-gray-200 border overflow-hidden
+                transform {{ $rotation }} {{ $margin }} {{ $marginTop }} ">
+                    <img src="{{ broccoli_asset($item) }}" class="w-full h-full object-contain" />
+                </div>
+            @endforeach
+
         </div>
 
     </div>

@@ -8,7 +8,7 @@
     $firstPart = implode(' ', $words);//remove last words and join other words
 @endphp
 
-<div class=" flex justify-center realtive lg:p-12 p-5">
+<div class=" flex justify-center realtive lg:py-12 p-5 2xl:py-14 ">
     <div class="lg:w-[60%] ">
         <div class="grid place-items-center ">
 
