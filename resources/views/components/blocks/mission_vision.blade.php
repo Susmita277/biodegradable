@@ -7,7 +7,7 @@
     $mission_visions = data_get($data, 'mission_visions');
 @endphp
 
-<div class="lg:p-12 p-5">
+<div class="lg:pt-12 lg:px-40 2xl:px-50 p-5">
     <div class=" text-center">
         <h2 class="font-poppins leading-relaxed">{{ $heading }}</h2>
         <p class="lg:!text-sm/8 text-sm/4 2xl:!text-xl/8 tracking-wide leading-relaxed lg:px-[25%] py-2">
@@ -15,7 +15,7 @@
         </p>
     </div>
     <div
-        class="relative bg-white  grid lg:grid-cols-2 grid-cols-1  lg:h-[320px]  rounded-3xl mt-[120px] lg:p-[10%]  lg:gap-[20%]">
+        class="relative bg-white  grid lg:grid-cols-2 grid-cols-1  lg:h-min-[320px] lg:h-max-fit  rounded-3xl mt-[120px]  lg:py-[10%] 2xl:py-[15%]  lg:gap-[15%] px-[5%]">
         <div
             class="bg-[#389537] absolute -top-[100px] lg:h-[200px] 2xl:h-[300px]  lg:left-[20%] lg:right-[20%] -left-2 -right-2 rounded-3xl ">
             <div class="w-full flex justify-between lg:px-12 px-5 gap-4">
@@ -39,7 +39,7 @@
         </div>
 
         @foreach ($mission_visions as $item)
-            <div class="lg:mt-10 mt-40">
+            <div class="lg:mt-10 mt-40 w-full">
                 <div class="flex gap-1 items-center ">
                     <div class="w-6 h-6 ">
                         <img src="{{broccoli_asset($item['image'])}}" class="w-full h-full object-cover">

@@ -8,8 +8,8 @@
     $image = data_get($data, 'image');
 @endphp
 <div
-    class="lg:m-12 m-5 flex justify-center items-end relative    items-center 2xl:h-[550px] lg:h-[420px] h-[300px]  rounded-xl bg-gradient-to-r from-[#389537] via-green-200 to-[#389537] ">
-    <div class="w-full 2xl:h-[550px] lg:h-[420px] h-[300px] bg-[#389537]/20 absolute  flex justify-center">
+    class="lg:mx-40 2xl:mx-50 m-5 flex justify-center items-end relative    items-center 2xl:h-[550px] lg:h-[420px] h-[300px]  rounded-xl bg-gradient-to-r from-[#389537] via-green-200 to-[#389537] ">
+    <div class="w-full 2xl:h-[550px] lg:h-[420px] h-[300px] bg-[#389537]/20 absolute  flex justify-center rounded-xl">
         <div class=" mt-10 lg:w-[40%] w-[90%]  ">
             <div>
                 <h2 class="font-poppins  leading-relaxed text-white text-center">

@@ -12,7 +12,7 @@
 
 <div>
     <div class=" flex justify-center relative ">
-        <div class="lg:w-[60%] md:[50%] w-full p-5 lg:px-12 lg:pt-12 ">
+        <div class="lg:w-[60%] md:[50%] w-full p-5 lg:px-12 lg:py-12 ">
             <div class="grid place-items-center ">
                 <div class="p-1 rounded-full  border border-gray-200 flex gap-1 justify-center w-fit mb-4 lg:mb-0">
                     <div class="w-5 h-5 ">
@@ -61,17 +61,17 @@
             class="lg:flex md:flex hidden flex-col  justify-center text-center items-start lg:text-left absolute lg:left-0 -left-5  opacity-75 lg:top-[45%] top-[55%] 2xl:top-[40%]">
             <div
                 class="flex  lg:justify-center lg:w-44 lg:h-44 h-28 w-28 2xl:w-64 2xl:h-64  rounded-full bg-transparent transform lg:-rotate-12 border-gray-200 border overflow-hidden">
-                <img src="rawmaterial.png" data-alt="Abstract representation of plant fibers and raw natural materials"
+                <img src="https://abi.on-forge.com/rawmaterial.png" data-alt="Abstract representation of plant fibers and raw natural materials"
                     class="w-full h-full object-contain" />
             </div>
             <div
                 class="flex  lg:justify-center lg:w-28 lg:h-28 h-16 w-16 2xl:w-40 2xl:h-40 transform rounded-full bg-transparent transform rotate-6 border-gray-200 border overflow-hidden  lg:ml-32 ml-10 lg:-mt-[3rem] -mt-[2rem]">
-                <img src="rawmaterial2.png" data-alt="Abstract representation of plant fibers and raw natural materials"
+                <img src="https://abi.on-forge.com/rawmaterial2.png" data-alt="Abstract representation of plant fibers and raw natural materials"
                     class="w-full h-full object-contain" />
             </div>
             <div
                 class="flex  lg:justify-center w-22 h-22 lg:w-36 lg:h-36 2xl:w-48 2xl:h-48 transform rounded-full bg-transparent transform rotate-6 border-gray-200 border overflow-hidden  lg:ml-8 lg:-mt-[3rem] -mt-[2rem]">
-                <img src="rawmaterial3.png" data-alt="Abstract representation of plant fibers and raw natural materials"
+                <img src="https://abi.on-forge.com/rawmaterial3.png" data-alt="Abstract representation of plant fibers and raw natural materials"
                     class="w-full h-full object-contain" />
             </div>
         </div>
@@ -82,17 +82,17 @@
             <div
                 class="lg:w-36 lg:h-36 h-28 w-28  2xl:w-40 2xl:h-40  object-cover rounded-full transparent transform rotate-12 border-gray-200 border overflow-hidden">
                 <img class="w-full h-full object-contain" data-alt="Texture of crumbling earth and soil"
-                    src="product1.png" />
+                    src="https://abi.on-forge.com/product1.png" />
             </div>
             <div
                 class="lg:w-44 lg:h-44 h-16 w-16  2xl:w-64 2xl:h-64 object-cover rounded-full transparent transform -rotate-6 border-gray-200 border overflow-hidden  -mt-[2rem] lg:-mt-[4rem] lg:mr-24 mr-12 ">
                 <img class="w-full h-full object-contain" data-alt="Texture of crumbling earth and soil"
-                    src="product2.png" />
+                    src="https://abi.on-forge.com/product2.png" />
             </div>
             <div
                 class="lg:w-28 lg:h-28 h-22 w-22 2xl:w-48 2xl:h-48 object-cover rounded-full transparent transform -rotate-6 border-gray-200 border overflow-hidden lg:-mt-[4rem] -mt-[2rem] lg:mr-8  ">
                 <img class="w-full h-full object-contain" data-alt="Texture of crumbling earth and soil"
-                    src="product3.png" />
+                    src="https://abi.on-forge.com/product3.png" />
             </div>
         </div>
 

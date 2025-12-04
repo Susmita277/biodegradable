@@ -9,7 +9,7 @@
     @endphp
     {{-- @dd($image); --}}
 
-    <div class="lg:p-12 p-5 w-full">
+    <div class="lg:py-12 lg:px-40 2xl:px-50 p-5 w-full">
         <div class=" text-center">
             <h2 class="font-poppins">{{ $heading }}</h2>
             <p
@@ -27,7 +27,7 @@
                         <div class="mt-8 2xl:mt-12">
                             <h3 class="font-poppins text-center">{{ $feature['title'] }}</h3>
                             <p
-                                class="text-center lg:!text-sm/8 text-sm/4 2xl:!text-xl/8 font-inter tracking-wide leading-relaxed py-2 text-gray-700">
+                                class="text-center lg:!text-xs/4 text-sm/4 2xl:!text-xl/8 font-inter tracking-wide leading-relaxed py-2 text-gray-500">
                                 {{ $feature['description'] }}
                             </p>
                         </div>

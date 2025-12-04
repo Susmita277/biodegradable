@@ -8,7 +8,7 @@
 @endphp
 
 {{-- highlighted products --}}
-<div class="lg:p-12  p-5">
+<div class="lg:py-12  p-5 lg:px-40 2xl:px-50">
     <div class=" text-center">
         <h2 class="font-poppins">{{ $heading }}</h2>
         <p
@@ -20,7 +20,7 @@
         <div class="swiper-wrapper ">
             @foreach ($images as $image)
                 <div
-                    class="swiper-slide lg:!w-[220px] lg:!h-[220px] !w-[200px] !h-[200px] 2xl:!w-[320px] 2xl:!h-[320px] rounded-2xl !overflow-hidden ">
+                    class="swiper-slide !h-[250px] 2xl:!h-[300px] rounded-2xl !overflow-hidden ">
                     <img src="{{ broccoli_asset($image) }}" class="object-cover h-full w-full" alt="products">
                 </div>
             @endforeach

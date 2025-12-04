@@ -6,17 +6,17 @@
         $process = data_get($data, 'process');
 
     @endphp
-    <div class="lg:p-12 p-5">
+    <div class="lg:py-12 lg:px-40 2xl:px-50 p-5">
         <div class=" text-center">
             <h2 class="font-poppins leading-relaxed">{{$heading}}</h2>
             <p class="lg:!text-sm/8 text-sm/8 tracking-wide leading-relaxed lg:px-[25%] py-2 2xl:!text-xl/8">
                {{$description}}
             </p>
         </div>
-        <div class="grid lg:grid-cols-5 lg:gap-10 pt-8 grid-cols-2 gap-4">
+        <div class="grid lg:grid-cols-5  pt-8 grid-cols-2 gap-4">
               @foreach($process as $item)
             <div
-                class=" h-[250px] 2xl:h-[350px] rounded-2xl overflow-hidden border border-gray-100 relative">
+                class=" h-[250px] 2xl:h-[300px] rounded-2xl overflow-hidden border border-gray-100 relative">
                 <img src="{{broccoli_asset($item['image'])}}"
                     class="w-full h-full object-cover">
                 <div
