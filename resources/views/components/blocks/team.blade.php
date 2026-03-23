@@ -13,7 +13,7 @@
             {{ $description }}
         </p>
     </div>
-    <div class="swiper SliderTwo  mt-16 !py-12 grid !grid-cols-1 gap-12 !lg:grid-cols-3 ">
+    <div class="swiper SliderTwo  mt-16 !py-12 grid ">
         <div class="swiper-wrapper ">
             @foreach ($members as $member)
                 <div class="swiper-slide ">
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="mt-6">
-                            <h3 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">{{ $member['name'] }}
+                            <h3 class="text-xl font-semibold  dark:text-zinc-100">{{ $member['name'] }}
                             </h3>
                             <p class="text-[#389537] font-medium">{{ $member['title'] }}</p>
                             <p class="mt-2 text-gray-500 dark:text-zinc-400 px-5">
@@ -39,7 +39,7 @@
             @endforeach
 
         </div>
-        <div class="swiper-pagination !pt-8"></div>
+        <div class="swiper-pagination "></div>
 
     </div>
 </div>
