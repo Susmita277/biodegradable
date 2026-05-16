@@ -2,8 +2,8 @@
     <ul class="flex justify-between items-center py-2 ">
         <li>
             <a href="{{ route('home') }}">
-                <div class="w-18 h-12 2xl:w-24 2xl:h-20 overflow-hidden">
-                    <img src="https://abi.on-forge.com/abi.png" class="w-full h-full object- contain object-center">
+                <div class="w-22 h-14 2xl:w-28 2xl:h-22 overflow-hidden">
+                    <img src="https://imgs.search.brave.com/Jafg16FAnHcy46kLYXckN6GQzfrpvnE1lFAPbnMjSXM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi93ZWIt/MTg2NDIyOTY4Lmpw/Zw" class="w-full h-full object- contain object-center">
                 </div>
             </a>
         </li>
@@ -11,11 +11,12 @@
             <a href="{{ route('home') }}">
                 <p class="hover:text-[#389537]">Home</p>
             </a>
-            <a href="{{ route('about') }}">
-                <p class="hover:text-[#389537]">About Us</p>
-            </a>
+    
             <a href="{{ route('why-us') }}">
                 <p class="hover:text-[#389537]">Why Us</p>
+            </a>
+            <a href="">
+                <p class="hover:text-[#389537]">Our Products</p>
             </a>
             <a href="{{ route('contact') }}">
                 <p class="hover:text-[#389537]">Contact</p>
