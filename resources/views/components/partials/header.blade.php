@@ -15,7 +15,7 @@
             <a href="{{ route('why-us') }}">
                 <p class="hover:text-[#389537]">Why Us</p>
             </a>
-            <a href="">
+            <a href="{{ route('products') }}">
                 <p class="hover:text-[#389537]">Our Products</p>
             </a>
             <a href="{{ route('contact') }}">
@@ -24,7 +24,7 @@
         </li>
         <li class="flex gap-2  justify-center">
            <a href="{{ route('home')}}#explore" class="smooth transition-all"> <button class="btn secondary">Explore</button></a>
-          <a href="{{ route('contact')}}">  <button class="btn highlight">Get a Quote</button></a>
+          <a href="{{ route('login')}}">  <button class="btn highlight">Sign In</button></a>
         </li>
     </ul>
 </div>
