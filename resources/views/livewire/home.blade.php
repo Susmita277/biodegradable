@@ -3,4 +3,6 @@
     {{-- I'm rollin' up my broccoli, LFG 🥦 --}}
     <x-seo :seo="$seo" />
     <x-page-blocks :blocks="$blocks" />
+  
+
 </div>

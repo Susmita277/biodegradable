@@ -51,7 +51,7 @@ seo:
         "addressCountry": "NP"
     }
     }
-  custom_meta: {  }
+  custom_meta: {}
 blocks:
   hero:
     title: 'Nature-Inspired Products Designed for a Better Planet'
@@ -66,7 +66,7 @@ blocks:
     leftsideimages:
       - { image: [01KBMB2BSBTAGXCH69FZM83H73.png, 01KBMB2BSGTYJ0BC4W3CRRRYCG.png, 01KBMB2BSP1V3VB4HVZGWKTYMN.png] }
     buttons:
-      - { button_icon: heroicon-c-arrow-trending-up, button_label: 'Green Solutions', button_url: '#green_solution' }
+      - { button_icon: heroicon-c-arrow-trending-up, button_label: 'Green Solutions', button_url: 'http://127.0.0.1:8000/contact' }
       - { button_icon: heroicon-s-arrow-right, button_label: "Let's Connect", button_url: 'http://127.0.0.1:8000/contact' }
     icon1: heroicon-c-face-smile
     icon2: heroicon-m-arrow-right
@@ -81,20 +81,6 @@ blocks:
       - { title: 'The Plastic Problem', description: 'Traditional plastic bags persist in our environment for centuries, harming wildlife and polluting our ecosystems.', image: 01KBCFX9XH3DXRTPKBPFZ517R5.png }
       - { title: 'The Natural Solution', description: 'Traditional Biodegradable bags are crafted from plant-based materials, designed to break down naturally and return to the earth. ', image: 01KBCFX9XK1EV2PY8FC44WQTXT.png }
       - { title: 'The Lasting Benefit', description: 'By choosing biodegradable, you help reduce landfill waste, conserve resources, and protect our planet for future generations.', image: 01KBCFX9XRBZPY53ENM3HAF19R.png }
-  gallery:
-    heading: 'Our Featured Products'
-    description: 'Biodegradable products naturally decompose within three months, keeping the environment clean and healthy.'
-    images:
-      - 01KBCG7KCRN33WSHDZW0B536NS.webp
-      - 01KBCG7KCYX33M1FKKF5B8ZSKQ.webp
-      - 01KBCG7KD8V30D4YMJWTYF9DZX.jpeg
-      - 01KBCG7KD9H0MT2TCVYZVHS2WV.webp
-      - 01KBCG7KDAY9H5C5ZJAD2MFBHZ.jpeg
-      - 01KBCGHZ6JY6GK6KSZ9VCWV2J0.7jpeg
-    alt: products
-    link: null
-    enable_slider: false
-    show_captions: false
   mission_vision:
     heading: 'Unveiling Our Identity'
     description: 'We aim to reduce environmental impact by offering biodegradable products that support cleaner living and promote responsible waste management.'

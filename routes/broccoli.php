@@ -12,3 +12,4 @@ Route::get('/about', \App\Livewire\About::class)->name('about');
 Route::get('/why-us', \App\Livewire\WhyUs::class)->name('why-us');
 Route::get('/product', \App\Livewire\Product::class);
 Route::get('/auth', \App\Livewire\Auth::class);
+Route::get('/user-profile', \App\Livewire\UserProfile::class);
